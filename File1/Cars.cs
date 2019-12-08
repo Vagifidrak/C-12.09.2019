@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace File1
+{
+    class Cars
+    {
+        public string marka;
+        public string model;
+        public double currentFuel;
+        public double maxFuel;
+        public double useFuel;
+        public Cars(string marka, string model, double maxFuel, double useFuel, double currentFuel = 35)
+        {
+            this.marka = marka;
+            this.model = model;
+            this.maxFuel = maxFuel;
+            this.useFuel = useFuel;
+            this.currentFuel = currentFuel;
+          
+        }
+        public void Go()
+        {double ndKm = 0;
+            while (ndKm == 0)
+            {
+                Console.WriteLine("Nece Km getmek isteyirsiz?");
+            string neededkm = Console.ReadLine();
+           
+            if(CheckInput(neededkm))
+            {
+                    ndKm = Convert.ToDouble(neededkm);
+                    if (currentFuel > ndKm / 100 * useFuel)
+                    {
+                        currentFuel -= ndKm / 100 * useFuel;
+                        Console.WriteLine("Siz {0} km getdiniz, masinda {1} litr benzin qaldi", ndKm, currentFuel);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Benzin kifayet etmir, benzin vurun.");
+                    }
+                }
+            }
+        }
+        
+
+        public bool CheckInput(string input)
+        {
+            try
+            {
+                Convert.ToDouble(input);
+                return true;
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("Zehmet olmasa reqem daxil edin");
+                return false;
+            }
+        }
+    }
+}

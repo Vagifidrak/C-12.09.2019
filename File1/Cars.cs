@@ -22,11 +22,38 @@ namespace File1
             this.currentFuel = currentFuel;
           
         }
+        public void TopUp()
+        {
+            Console.WriteLine("Ne qeder benzin vurum???");
+            string addFuel = Console.ReadLine();
+            
+            if (addFuel == "fuel")
+            {
+                currentFuel += maxFuel - currentFuel;
+                Console.WriteLine("Tam Yanacaq doldurdunuz. Hal hazirda {0} litr benzim var", currentFuel);
+            }
+            else
+            {
+                double addedFuel = Convert.ToDouble(addFuel);
+
+                if (maxFuel < addedFuel + currentFuel)
+                {
+
+                    Console.WriteLine("Yanacaq bakiniz kifayet etmir");
+                }
+                else
+                {
+                    currentFuel += addedFuel;
+                    Console.WriteLine("Yanacaq bakiniza {0} litr elave edildi. Pulu veriniz. Hal hazirda {1} litr yanacaq var", addedFuel, currentFuel);
+                }
+            }
+            
+        }
         public void Go()
         {double ndKm = 0;
-            while (ndKm == 0)
-            {
-                Console.WriteLine("Nece Km getmek isteyirsiz?");
+        while (ndKm == 0)
+        {
+            Console.WriteLine("Nece Km getmek isteyirsiz?");
             string neededkm = Console.ReadLine();
            
             if(CheckInput(neededkm))

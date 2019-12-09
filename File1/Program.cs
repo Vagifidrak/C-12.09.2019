@@ -10,11 +10,11 @@ namespace File1
     {
         static void Main(string[] args)
         {
-            Cars car1 = new Cars("M5","BMW",70,14);
+            //Azərbaycan şirifdi istifadə etmək üçün...
+            Console.OutputEncoding = Encoding.UTF8;
 
-            Random rn = new Random();
-            Console.WriteLine(rn.Next(0,300));
-
+            Cars car1 = new Cars("M5", "BMW", 70, 14);
+                        
             string userInput;
             do
             {
@@ -23,6 +23,7 @@ namespace File1
                 Console.WriteLine("3.Stop");
                 Console.WriteLine("4.Exit");
                 Console.Write(">>>>>>>>>");
+
                 userInput = Console.ReadLine();
                 switch (userInput)
                 {
@@ -31,21 +32,20 @@ namespace File1
 
                         break;
                     case "2":
-                        Console.WriteLine("Masina benzin vuruldu");
+                        car1.TopUp();
                         break;
+
                     case "3":
                         Console.WriteLine("Getdiyi km");
                         break;
                     case "4":
-                        Console.WriteLine("Xismetden istifadeye gore tesekkur edirik");
+                        Console.WriteLine("Xidmetden istifadeye gore tesekkur edirik");
                         break;
 
                     default:
                         Console.WriteLine("Yuxaridaki reqemlerden birini yazin");
                         break;
                 }
-
-
             } while (userInput != "5");
 
         }

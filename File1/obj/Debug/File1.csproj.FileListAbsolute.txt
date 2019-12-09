@@ -4,3 +4,10 @@ C:\Users\User\source\repos\File1\File1\bin\Debug\File1.exe
 C:\Users\User\source\repos\File1\File1\bin\Debug\File1.pdb
 C:\Users\User\source\repos\File1\File1\obj\Debug\File1.exe
 C:\Users\User\source\repos\File1\File1\obj\Debug\File1.pdb
+C:\Users\Vaqif.Idrak\Desktop\c--CAR\File1\bin\Debug\File1.exe.config
+C:\Users\Vaqif.Idrak\Desktop\c--CAR\File1\bin\Debug\File1.exe
+C:\Users\Vaqif.Idrak\Desktop\c--CAR\File1\bin\Debug\File1.pdb
+C:\Users\Vaqif.Idrak\Desktop\c--CAR\File1\obj\Debug\File1.csprojAssemblyReference.cache
+C:\Users\Vaqif.Idrak\Desktop\c--CAR\File1\obj\Debug\File1.csproj.CoreCompileInputs.cache
+C:\Users\Vaqif.Idrak\Desktop\c--CAR\File1\obj\Debug\File1.exe
+C:\Users\Vaqif.Idrak\Desktop\c--CAR\File1\obj\Debug\File1.pdb
